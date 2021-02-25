@@ -1,8 +1,10 @@
 import React from 'react';
+import './index.css';
 
 function Display(props) {
   return (
-    <thead>
+  <div className="container">
+    <thead className = ".responsive-table">
       <tr>
         <th>
           <img alt={props.firstName} src={props.picture} />
@@ -14,6 +16,7 @@ function Display(props) {
         <td>{props.city}</td>
       </tr>
     </thead>
+  </div>
   );
 }
 
