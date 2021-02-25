@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Main from './pages/main';
-//import Col from './components/Col';
 import Display from './components/Display';
 import SearchForm from './components/SearchForm';
 import Wrapper from './components/Wrapper';
@@ -74,18 +73,23 @@ class App extends React.Component {
             <Route exact path="/main" component={Main} />
           </Wrapper>
         </div>
-        <SearchForm />
+        <div className = "search"> 
+        <SearchForm
+          value={this.state.search}
+          handleInputChange={this.handleInputChange}
+          handleFormSubmit={this.handleFormSubmit} />
+        </div>
         {[...this.state.employees].map((item) => (
-                  <Display
-                    picture={item.picture}
-                    firstName={item.firstName}
-                    lastName={item.lastName}
-                    email={item.email}
-                    phone={item.phone}
-                    city={item.city}
-                    key={item.key}
-                  />
-                ))}
+          <Display
+            picture={item.picture}
+            firstName={item.firstName}
+            lastName={item.lastName}
+            email={item.email}
+            phone={item.phone}
+            city={item.city}
+            key={item.key}
+          />
+        ))}
       </Router>
     );
   }

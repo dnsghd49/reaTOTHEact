@@ -8,8 +8,8 @@ function About() {
   return (
     <div>
       <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg">
-        <h1>Poppy</h1>
-        <h2>This poppy here is the best Employee of the month!</h2>
+        <h1>Mr. Poppy</h1>
+        <h2>Mr. Poppy is the best Employee of the month!</h2>
       </Hero>
       <Container style={{ marginTop: 30 }}>
         <Row>

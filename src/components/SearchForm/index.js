@@ -15,10 +15,10 @@ function SearchForm(props) {
           placeholder="Search Employee"
           id="search"
         />
-        <button onClick={props.handleFormSubmit} className="btn btn-primary">
+        <button onClick={props.handleFormSubmit}>
           Search
         </button>
-        <button onClick={props.refreshPage} className="btn btn-primary ml-1">
+        <button onClick={props.refreshPage}>
           Reset
         </button>
         {/* <br /> */}
